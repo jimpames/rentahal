@@ -124,6 +124,8 @@ Public Worker Node Onboarding: We're streamlining the process for public users t
 
 Health Monitoring Enhancements: Expanding on the health restoration routine to improve the reintegration of previously blacklisted workers.
 
+Master Control Program: Separation from BETA-5 AI worker node [64-8700-2070-8-7b] onto dedicated MCP Hardware: M-5 MULTITRONIC [256-E52600V2X2-R720]
+
 Subsystems
 
 Sysop Features
