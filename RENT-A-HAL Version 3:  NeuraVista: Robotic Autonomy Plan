@@ -1,0 +1,92 @@
+
+# RENT-A-HAL Version 3:  NeuraVista: Robotic Autonomy Plan
+
+## Overview:
+The goal of Version 3 is to evolve Rent-A-HAL into a fully autonomous AI system capable of operating robotic platforms using a combination of vision, chat, voice, and imagination subsystems. The core concept revolves around modular API-based subsystems controlled via FAST API, with communication through JSON messages over WebSockets. 
+
+## Key Components:
+- **FAST API for Subsystems**: Each subsystem (locomotion, sensors, vision) will have its own API for modular control.
+- **Vision Integration**: The AI will continuously analyze the environment via a camera feed.
+- **Autonomous CHAT**: Context from the vision system will feed into the chat, allowing HAL to respond intelligently.
+- **TTS (Text-to-Speech)**: HAL’s responses will be converted into real-time audio for communication.
+- **Sensor Data**: HAL will use sensors for environmental awareness, enhancing decision-making.
+- **Robotic Control**: Rent-A-HAL will control robotic platforms autonomously using servos, sensors, and inference.
+
+---
+
+## Phase 1: API and Subsystem Integration (2-3 Weeks)
+
+### 1. FAST API Architecture for Subsystems:
+- **Goal**: Create a modular API infrastructure for each robotic subsystem.
+- **Tasks**:
+  1. Define APIs for each subsystem (locomotion, vision, sensors).
+  2. Build endpoint prototypes for servo control (locomotion) and vision.
+  3. Ensure WebSocket compatibility for controlling subsystems using JSON messages.
+
+### 2. Camera and Vision Integration:
+- **Goal**: Set up the vision subsystem to autonomously capture and analyze images.
+- **Tasks**:
+  1. Implement camera API for image capture at intervals.
+  2. Integrate image recognition models (e.g., OpenCV) for vision processing.
+  3. Feed vision output (VISION_TEXT) into the chat subsystem.
+
+---
+
+## Phase 2: Autonomous Decision-Making and Communication (2-3 Weeks)
+
+### 3. CHAT, Voice, and Fuzzy Logic Inference:
+- **Goal**: Generate responses based on visual data and provide spoken responses.
+- **Tasks**:
+  1. Connect VISION_TEXT to CHAT for response generation.
+  2. Build routines that feed CHAT_OUTPUT into TTS for real-time spoken responses.
+  3. Implement fuzzy logic for context-based inference.
+
+### 4. Spoken Interaction (TTS Integration):
+- **Goal**: Convert HAL’s responses into spoken audio.
+- **Tasks**:
+  1. Finalize integration with Text-to-Speech (TTS) APIs.
+  2. Ensure smooth audio streaming to the browser.
+
+---
+
+## Phase 3: Robotic Subsystem Control (3-4 Weeks)
+
+### 5. Locomotion API for Robotic Legs:
+- **Goal**: Set up FAST API for controlling robotic legs via servos.
+- **Tasks**:
+  1. Build FAST API endpoints for servo control.
+  2. Define JSON structure for movement commands.
+  3. Test locomotion with basic movements (e.g., walking, turning).
+
+### 6. Sensor Integration (Environmental Awareness):
+- **Goal**: Integrate sensors for environmental awareness and feedback.
+- **Tasks**:
+  1. Set up FAST API for sensor input (distance, temperature, etc.).
+  2. Integrate sensor data into CHAT for context-aware conversation.
+
+---
+
+## Phase 4: Autonomous Robotic Operation (2-3 Weeks)
+
+### 7. Fully Autonomous Mode:
+- **Goal**: Combine subsystems for fully autonomous operation.
+- **Tasks**:
+  1. Implement continuous camera feed for autonomous decision-making.
+  2. Integrate vision, chat, and locomotion into a unified control loop.
+  3. Test the system in real-world scenarios and iterate.
+
+---
+
+## Ongoing Tasks:
+- **Testing & Debugging**: Each phase includes testing subsystems individually and in combination.
+- **Enhancements & Optimizations**: Continuously enhance AI models and optimize performance for real-time operation.
+
+---
+
+## Key Milestones:
+1. Modular APIs for each robotic subsystem.
+2. Autonomous camera and vision system integrated into HAL's chat.
+3. TTS integration for real-time spoken responses.
+4. Servo motor control API for robotic movement.
+5. Sensor integration for environmental awareness.
+6. Fully autonomous HAL operating a robotic platform.
