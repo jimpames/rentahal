@@ -1,0 +1,85 @@
+https://rentahal.com
+
+public demo is live on URL above - 3 node array running: 
+
+NineThousand Operating System - Secure, OnPrem AI
+
+28 sep 24 - all day session with claude sonnet 3.5 
+- we put much more extensive logging in place - every function, every variable
+we are using BARETAIL free windows gui to tail the webgui_detailed.log now
+looks like a log msg every 300 ms or so...
+
+
+we fixed it so if you forget to put something in the config.ini
+the system will automatically append all the missing values and their defaults to the running config.ini as a reminder...
+
+
+there is a be_sysop.py now - you run that , it come up on 5666 - you connect to it on a browser, and YOU are the sysop for that database instance - 
+- you can ban users and terminate queries if you are sysop, a menu for sysop is hidden from normal users and displays automatically for sysop
+
+We got a grip on the speech out intermittent system hang that was causing us to have to re-launch the backend - 
+it was our call to a gpu enabled external ffmpeg -  that's in a asynch process now as a call we can sh*can after a timeout...
+
+
+system seems super reliable and smooth on the three node array
+
+
+Times from query submission to result display:
+(actual results) 
+
+- WHISPER 
+speech to text - instantly in some cases
+
+- BARK 
+speech out - as low as 5 sec for simple answer - capital of ohio... etc.
+
+- LLAMA3
+chat, bio of g. washington. 450 words in 11.5 secs...
+
+- LLAVA:7b
+vision, recognotion and description of photo - us president - 75 word description in 4.4 sec.
+
+- STABLE DIFFUSION 1.5 AUTOMATIC1111
+imagine, photo of park with bench and lawn, photo realistic - (512x512 fixed) - 8.2 seconds
+
+API integrations: 
+- ollama
+- claude dev
+- Hugging Faces
+
+Supported platforms:
+- Browser - must support websockets and https:
+
+theory of design:
+API first
+asynchronus
+event driven 
+infinite state machine
+all endpoints are websockets
+all communications are JSON
+
+Supported number of AI worker nodes: unlimited
+
+Supported number of System Users: unlimited (to the limit of your hardware)
+
+design:
+python/javascript/html
+
+source:
+closed
+ - except for API apps, like our robot sentry or AI workflow automator, which are open and published...
+
+ Coded by Artificial Intelligence at the N2NHU Lab for Applied AI in Newburgh, NY USA
+
+
+
+
+
+
+
+
+
+
+
+
+
