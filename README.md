@@ -7,10 +7,6 @@ https://x.com/rentahal - our X feed !
 https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump - our coin !
 https://www.linkedin.com/in/jimpames/ - our linkedin !
 
-
-
-the rent a hal project for AI
-
 This project is the RENT A HAL AI Operating Realm
 
 Support out of the box:
