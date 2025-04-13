@@ -2,10 +2,10 @@
   <img src="https://github.com/jimpames/rentahal/blob/main/rentahalbanner.png?raw=true" alt="RENT A HAL Banner" width="100%">
 </p>
 # rentahal
-https://rentahal.com  - public demo !!!!!
-https://x.com/rentahal
-https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump
-https://www.linkedin.com/in/jimpames/
+https://rentahal.com  - public demo !
+https://x.com/rentahal - our X feeed !
+https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump - our coin !
+https://www.linkedin.com/in/jimpames/ - our linkedin !
 
 
 
