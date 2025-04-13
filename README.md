@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/jimpames/rentahal/blob/main/rentahalbanner.png?raw=true" alt="RENT A HAL Banner" width="100%">
+</p>
 # rentahal
 https://rentahal.com  - public demo !!!!!
 https://x.com/rentahal
