@@ -3,7 +3,7 @@
 </p>
 # rentahal
 https://rentahal.com  - public demo !
-https://x.com/rentahal - our X feeed !
+https://x.com/rentahal - our X feed !
 https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump - our coin !
 https://www.linkedin.com/in/jimpames/ - our linkedin !
 
