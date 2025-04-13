@@ -1,4 +1,11 @@
 # rentahal
+https://rentahal.com  - public demo !!!!!
+https://x.com/rentahal
+https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump
+https://www.linkedin.com/in/jimpames/
+
+
+
 the rent a hal project for AI
 
 This project is the RENT A HAL AI Operating Realm
