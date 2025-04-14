@@ -1,0 +1,571 @@
+Multi-Tronic Operating Realm ("RENT-A-HAL")
+Guide to Operations
+
+
+# RENT A HAL: User Manual and Guide to Operations
+
+![RENT A HAL Banner](https://github.com/jimpames/rentahal/blob/main/rentahalbanner.png?raw=true)
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [System Overview](#system-overview)
+3. [Installation](#installation)
+   - [Prerequisites](#prerequisites)
+   - [Setup Process](#setup-process)
+   - [Configuration](#configuration)
+4. [Architecture](#architecture)
+   - [Multi-Node System](#multi-node-system)
+   - [Backend Orchestrator](#backend-orchestrator)
+   - [AI Worker Nodes](#ai-worker-nodes)
+5. [Web User Interface](#web-user-interface)
+   - [User Registration](#user-registration)
+   - [Main Dashboard](#main-dashboard)
+   - [Setting Your Nickname](#setting-your-nickname)
+   - [Query Modes](#query-modes)
+   - [Submitting Queries](#submitting-queries)
+   - [Results and History](#results-and-history)
+6. [AI Capabilities](#ai-capabilities)
+   - [Chat Mode](#chat-mode)
+   - [Vision Mode](#vision-mode)
+   - [Imagine Mode](#imagine-mode)
+   - [Speech Mode](#speech-mode)
+7. [Wake Word Functionality](#wake-word-functionality)
+   - [Activating Wake Word Mode](#activating-wake-word-mode)
+   - [Available Commands](#available-commands)
+   - [Command Flow](#command-flow)
+8. [System Administration](#system-administration)
+   - [Sysop Panel](#sysop-panel)
+   - [Managing AI Workers](#managing-ai-workers)
+   - [Managing Models](#managing-models)
+   - [User Management](#user-management)
+   - [System Statistics](#system-statistics)
+9. [API Usage](#api-usage)
+   - [Available Endpoints](#available-endpoints)
+   - [Authentication](#authentication)
+   - [Request and Response Formats](#request-and-response-formats)
+10. [Troubleshooting](#troubleshooting)
+    - [Common Issues](#common-issues)
+    - [Logging](#logging)
+    - [Health Checks](#health-checks)
+11. [Extending Functionality](#extending-functionality)
+    - [Adding New AI Workers](#adding-new-ai-workers)
+    - [Adding New Models](#adding-new-models)
+12. [Licensing](#licensing)
+13. [Support and Resources](#support-and-resources)
+
+## Introduction
+
+RENT A HAL (Heuristic Algorithmic Liaison) is an on-premises, secure AI system that provides a unified interface for accessing multiple AI capabilities including chat, vision processing, image generation, and speech conversion. The system is designed to be modular, scalable, and privacy-focused, keeping all data within your control.
+
+This manual provides detailed instructions for installing, configuring, and operating RENT A HAL, as well as guidance for system administrators and developers who wish to extend its functionality.
+
+## System Overview
+
+RENT A HAL consists of several components working together:
+
+- **Web Interface**: A user-friendly frontend built with HTML, JavaScript, and Tailwind CSS
+- **Backend Orchestrator**: A FastAPI-based server that manages connections, queues, and routes requests
+- **AI Worker Nodes**: Specialized nodes that handle different types of AI processing
+- **Database**: SQLite database for storing user information, queries, and system statistics
+- **Redis**: Used for caching and messaging between components
+
+The system supports various AI models and services including:
+- Ollama
+- Llama
+- Llava
+- Stable Diffusion
+- Claude API
+- Hugging Face models
+
+## Installation
+
+### Prerequisites
+
+Before installing RENT A HAL, ensure you have the following:
+
+- Python 3.9 or higher
+- Redis server
+- CUDA-compatible GPU(s) for optimal performance
+- Microphone and speakers for speech functionality
+- Webcam for vision functionality
+- At least 16GB RAM
+- 50GB free disk space
+
+### Setup Process
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/jimpames/rentahal.git
+cd rentahal
+```
+
+2. **Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Initialize the database**
+
+```bash
+python webgui.py --init_db
+```
+
+4. **Start the Redis server**
+
+```bash
+redis-server
+```
+
+5. **Launch the application**
+
+```bash
+python webgui.py
+```
+
+The web interface will be available at http://localhost:5000 by default.
+
+### Configuration
+
+RENT A HAL uses a configuration file (`config.ini`) to manage various settings. A default configuration will be generated on first run, which you can then modify to suit your needs.
+
+Key configuration sections include:
+
+- **Settings**: Debug mode, cost rates
+- **Database**: Database name and settings
+- **Server**: Host and port configuration
+- **Workers**: Default worker addresses and health check intervals
+- **HuggingFace**: API keys and model settings
+- **Claude**: API keys and endpoints
+- **Security**: Secret keys and token settings
+- **Performance**: Connection limits and timeouts
+- **Costs**: Cost calculation parameters
+- **Queue**: Queue size and timeout settings
+- **Chunking**: File chunking parameters
+
+Example configuration:
+
+```ini
+[Settings]
+debug = True
+idle_watt_rate = 500
+premium_watt_rate = 1000
+electricity_cost_per_kwh = 0.25
+
+[Database]
+database_name = llm_broker.db
+
+[Server]
+host = 0.0.0.0
+port = 5000
+debug_port = 5001
+
+[Workers]
+default_worker_address = localhost:8000
+health_check_interval = 60
+NO_BLACKLIST_IMAGINE = 1
+```
+
+## Architecture
+
+### Multi-Node System
+
+RENT A HAL is designed as a multi-node system with three primary components:
+
+1. **Backend Realm Orchestrator**: This is the central coordination node that handles user connections, request queuing, and routing.
+2. **Stable Diffusion Node**: A dedicated node for image generation.
+3. **Chat/Vision Node**: A node specialized for text processing and image analysis.
+
+This distributed architecture allows for scalability and load balancing, with the ability to add additional worker nodes as needed.
+
+### Backend Orchestrator
+
+The Backend Realm Orchestrator is the heart of the RENT A HAL system. It:
+
+- Manages WebSocket connections with clients
+- Authenticates users
+- Maintains the query queue
+- Routes requests to appropriate worker nodes
+- Collects and returns results
+- Tracks system statistics and health
+- Provides system administration functions
+
+### AI Worker Nodes
+
+AI Worker Nodes are responsible for the actual AI processing. Each node can be specialized for specific tasks, such as:
+
+- **Chat Workers**: Process text-based queries using language models
+- **Vision Workers**: Analyze and interpret images
+- **Imagine Workers**: Generate images from text descriptions
+
+Worker nodes communicate with the Backend Orchestrator through a simple API, making it easy to add new worker types or scale existing ones.
+
+## Web User Interface
+
+### User Registration
+
+The first time you access RENT A HAL, the system will automatically assign you a unique ID (GUID) stored as a browser cookie. Your session will persist across visits using this ID.
+
+The first user to access the system becomes the System Operator (sysop) with administrative privileges.
+
+### Main Dashboard
+
+The main dashboard provides access to all RENT A HAL functions:
+
+- Nickname setting
+- Query submission
+- Results display
+- Queue information
+- Cost tracking
+- Previous queries
+
+For sysops, an additional administration panel is available.
+
+### Setting Your Nickname
+
+1. In the upper section of the interface, find the "Set Your NICKname" field
+2. Enter your desired nickname in the input box
+3. Click the "Set Nickname" button
+
+Your nickname will be displayed in the user information section and will be visible to sysops.
+
+### Query Modes
+
+RENT A HAL supports four primary query modes:
+
+1. **Chat**: Text-based interaction with language models
+2. **Vision**: Image analysis and interpretation
+3. **Imagine**: Text-to-image generation
+4. **Speech**: Voice input and output
+
+Select the appropriate mode from the dropdown menu before submitting your query.
+
+### Submitting Queries
+
+For text-based queries (Chat, Imagine):
+1. Select the query type
+2. Select the model type and specific model
+3. Enter your prompt in the text area
+4. Click "Submit Query"
+
+For vision queries:
+1. Select "Vision" as the query type
+2. Select the model type and specific model
+3. Enter a prompt (optional)
+4. Upload an image by clicking or dragging and dropping into the designated area
+5. Click "Submit Query"
+
+For speech queries:
+1. Select "Speech" as the query type
+2. Select the model type and specific model
+3. Click "Start Voice Input"
+4. Speak your query
+5. Click "Stop Recording" when finished
+6. Click "Submit Query"
+
+### Results and History
+
+Query results are displayed in the Results section, with the most recent result at the top. Each result includes:
+
+- The AI's response (text, image, or audio)
+- Processing time
+- Associated cost
+
+Previous queries are listed in the Previous Queries section, allowing you to review your interaction history.
+
+## AI Capabilities
+
+### Chat Mode
+
+Chat mode provides text-based interaction with language models. It supports:
+
+- Multiple model options (worker nodes, Hugging Face models, Claude)
+- Context-aware conversations
+- Code generation and formatting
+- Information retrieval and synthesis
+
+Example prompt: "Explain quantum computing in simple terms."
+
+### Vision Mode
+
+Vision mode allows you to upload images for analysis. The system can:
+
+- Identify objects and scenes
+- Read and extract text
+- Analyze content
+- Generate descriptions
+- Answer questions about the image
+
+Example prompt: "What objects are in this image?" with an uploaded photo.
+
+### Imagine Mode
+
+Imagine mode generates images from text descriptions using Stable Diffusion. Features include:
+
+- Detailed image creation from text prompts
+- Style specification
+- Subject matter control
+- High-resolution output
+
+Example prompt: "A futuristic cityscape with flying cars and neon lights."
+
+### Speech Mode
+
+Speech mode enables voice interaction with the system, including:
+
+- Speech-to-text conversion using Whisper
+- Text-to-speech response generation using BARK or pyttsx3
+- Natural conversation flow
+- Wake word activation
+
+## Wake Word Functionality
+
+### Activating Wake Word Mode
+
+RENT A HAL includes a wake word system that allows for hands-free operation:
+
+1. Click the "Enable Wake Word Mode" button
+2. Wait for the system to initialize and say "9000 ready. Say the wake word."
+3. Say "Computer" to activate the system
+4. The system will respond and enter menu mode
+
+### Available Commands
+
+Once in wake word mode, the following commands are available:
+
+**Top-level commands:**
+- "Computer" - Activate the system and enter menu mode
+- "Goodbye" - Deactivate wake word mode
+
+**Menu commands:**
+- "Chat" - Enter chat mode
+- "Vision" - Activate the webcam for vision processing
+- "Imagine" - Enter imagine mode
+- "Weather" - Get current weather information
+- "Gmail" - Access Gmail functionality (requires authorization)
+
+**In prompt mode:**
+- "Computer" - Submit the current prompt
+- "Backspace" - Erase the current prompt
+
+### Command Flow
+
+The wake word system follows this flow:
+
+1. **Listening** - Waiting for the wake word ("Computer")
+2. **Menu** - Listening for a mode selection
+3. **Prompt** - Building a prompt through voice input
+4. **Processing** - Executing the query
+
+After processing, the system returns to the listening state.
+
+## System Administration
+
+### Sysop Panel
+
+The System Operator (sysop) has access to an administration panel with advanced features:
+
+- System statistics
+- AI worker management
+- Model management
+- User management
+- Queue control
+- Broadcast messaging
+
+The first user to access the system is automatically designated as the sysop.
+
+### Managing AI Workers
+
+Sysops can add, remove, and monitor AI worker nodes:
+
+**To add a worker:**
+1. In the Sysop Panel, locate the "Manage AI Workers" section
+2. Enter the worker name, address, and type
+3. Click "Add Worker"
+
+**To remove a worker:**
+1. Find the worker in the list
+2. Click the "Remove" button next to the worker
+
+The system automatically monitors worker health and will blacklist unreachable workers.
+
+### Managing Models
+
+Sysops can add and remove Hugging Face models:
+
+**To add a model:**
+1. In the Sysop Panel, locate the "Manage Hugging Face Models" section
+2. Enter the model name and type
+3. Click "Add Hugging Face Model"
+
+**To remove a model:**
+1. Find the model in the list
+2. Click the "Remove" button next to the model
+
+### User Management
+
+Sysops can view and manage users:
+
+- See user information (nickname, GUID, query stats)
+- Ban or unban users
+- Terminate active queries
+
+**To ban a user:**
+1. Find the user in the User Management section
+2. Click the "Ban" button next to the user
+
+**To terminate a query:**
+1. Find the user in the User Management section
+2. Click the "Terminate Query" button
+
+### System Statistics
+
+The sysop panel provides detailed system statistics:
+
+- Total queries processed
+- Total processing time
+- Total system cost
+- Per-query-type performance metrics
+- Worker health status
+- Connected users count
+
+## API Usage
+
+### Available Endpoints
+
+RENT A HAL provides a REST API for programmatic access:
+
+- `/api/chat` - Process text queries
+- `/api/vision` - Process image analysis queries
+- `/api/imagine` - Generate images from text
+- `/api/whisper` - Convert speech to text
+- `/api/bark` - Convert text to speech
+
+### Authentication
+
+API requests require a valid user GUID, which can be obtained through the web interface.
+
+Include the GUID in the request headers:
+
+```
+X-User-GUID: YOUR_GUID_HERE
+```
+
+### Request and Response Formats
+
+Requests should be formatted as JSON with the appropriate structure for each endpoint.
+
+**Example chat request:**
+
+```json
+{
+  "prompt": "Explain quantum computing",
+  "query_type": "chat",
+  "model_type": "worker_node",
+  "model_name": "2070sLABCHAT"
+}
+```
+
+Responses will include the query result, processing time, and cost:
+
+```json
+{
+  "result": "Quantum computing is...",
+  "processing_time": 2.5,
+  "cost": 0.025,
+  "result_type": "text"
+}
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**WebSocket connection error:**
+- Check that the server is running
+- Verify network connectivity
+- Ensure the browser supports WebSockets
+
+**Worker health issues:**
+- Check worker node availability
+- Verify network connectivity between orchestrator and worker
+- Check worker logs for errors
+
+**Speech recognition not working:**
+- Ensure microphone permissions are granted
+- Use a Chrome-based browser (best support for speech recognition)
+- Check that your microphone is functioning
+
+**Image generation failing:**
+- Verify Stable Diffusion worker is running
+- Check GPU availability and memory
+- Review prompt for forbidden content
+
+### Logging
+
+RENT A HAL maintains detailed logs in the following files:
+
+- `webgui_detailed.log` - Main application log
+- `uvicorn.log` - Web server log
+
+Log levels can be configured in the `config.ini` file under the `Settings` section.
+
+### Health Checks
+
+The system includes automatic health checks for all components:
+
+- Worker nodes are checked every 60 seconds (configurable)
+- Unhealthy workers are blacklisted after multiple failures
+- System watchdog monitors and restarts frozen processes
+
+To manually check system health, access the debug endpoint:
+`http://localhost:5000/debug/system_status`
+
+## Extending Functionality
+
+### Adding New AI Workers
+
+To add a new AI worker type:
+
+1. Create a new worker service that implements the required API endpoints:
+   - `/health` - For health checks
+   - `/predict` - For processing queries
+
+2. Add the worker to the system through the sysop panel or directly in the database
+
+3. Update the client-side model selection logic in `script.js` if necessary
+
+### Adding New Models
+
+To add new models to existing worker types:
+
+1. Ensure the model is available on the worker node
+2. Add the model through the sysop panel or directly in the database
+3. The model will automatically appear in the model selection dropdown
+
+## Licensing
+
+RENT A HAL is licensed under the GNU General Public License v3.0 (GPL-3.0) with additional supplemental terms:
+
+- No Closed Source Derivatives: Any derivative work must remain fully open source
+- No Patents: The system cannot be patented
+- License Must Propagate: Modified versions must include the same license terms
+- Enforcement: Violation terminates rights under the license
+
+See the LICENSE and LICENSE-SUPPLEMENTAL-VERY-IMPORTANT files for complete details.
+
+## Support and Resources
+
+For additional help and resources:
+
+- Visit the project website: [https://rentahal.com](https://rentahal.com)
+- Follow on Twitter: [https://x.com/rentahal](https://x.com/rentahal)
+- GitHub repository: [https://github.com/jimpames/rentahal](https://github.com/jimpames/rentahal)
+- YouTube demos: [https://youtu.be/k8xWLwzsHZ8](https://youtu.be/k8xWLwzsHZ8)
+- Book: [Thoughts on the Nature of Intelligence](https://www.amazon.com/Thoughts-Nature-Intelligence-j-ames-ebook/dp/B0DXCGP7GD)
+
+---
+
+© 2025 RENT A HAL - Multi-Tronic Operating Realm
