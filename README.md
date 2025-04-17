@@ -9,6 +9,12 @@ https://www.linkedin.com/in/jimpames/ - our linkedin !
 
 This project is the RENT A HAL AI Operating Realm
 
+An Open-Source Speech-Enabled Web gui For Ollama
+- with support for Llama, Llava, Stable Diffusion
+- A I App platform with API interfaces
+- out of the chute support for claude API and huggingface API
+
+  
 Support out of the box:
 - Ollama - native fastapi()
 - Llama - native fastapi()
