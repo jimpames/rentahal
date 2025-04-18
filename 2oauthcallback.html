@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Callback</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            console.log("OAuth Callback triggered.");
+            
+            // Extract the access token and state from the URL
+            const hash = window.location.hash.substring(1);
+            const params = new URLSearchParams(hash);
+            const accessToken = params.get('access_token');
+            const state = params.get('state');
+
+            console.log("Access Token:", accessToken);
+            console.log("State:", state);
+            
+            if (accessToken && state) {
+                // Post the token back to the parent window
+                console.log("Posting message to parent window with access token...");
+                window.opener.postMessage({
+                    type: 'OAUTH_CALLBACK',
+                    accessToken: accessToken,
+                    state: state
+                }, window.opener.location.origin);
+            } else {
+                console.error("Access token or state not found in URL.");
+            }
+
+            // Let parent handle the window close due to COOP restrictions
+            try {
+                console.log("Notifying parent window to close popup...");
+                window.opener.postMessage({ type: 'OAUTH_CLOSE_WINDOW' }, window.opener.location.origin);
+            } catch (e) {
+                console.error('Failed to notify parent window for closure', e);
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>OAuth Callback</h1>
+    <p>Processing authentication...</p>
+</body>
+</html>
