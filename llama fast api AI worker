@@ -1,0 +1,3 @@
+cd C:\Users\jimpames\Desktop\RAH-19-sep-dev
+Scripts\activate
+start uvicorn main:app_llama --host 0.0.0.0 --port 8000
