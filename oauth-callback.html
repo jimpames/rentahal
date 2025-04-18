@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Redirect</title>
+</head>
+<body>
+    <script>
+    function getHashParams() {
+        const hash = window.location.hash.substr(1);
+        return hash.split('&').reduce((result, item) => {
+            const parts = item.split('=');
+            result[parts[0]] = decodeURIComponent(parts[1]);
+            return result;
+        }, {});
+    }
+
+    const params = getHashParams();
+    if (params.access_token) {
+        window.opener.postMessage({
+            type: 'OAUTH_CALLBACK',
+            accessToken: params.access_token,
+            state: params.state
+        }, 'https://rentahal.com');
+    }
+    </script>
+</body>
+</html>
