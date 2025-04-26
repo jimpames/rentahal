@@ -32,7 +32,7 @@ Support out of the box:
 
 - human interfaces:
 - web interface for chat, vision, imagine
-- speech input and putput
+- speech input and output
 - See demo:
 - https://youtu.be/k8xWLwzsHZ8?si=O55Z9m6HoUXUb3q2
 
