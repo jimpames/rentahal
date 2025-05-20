@@ -9,6 +9,10 @@ https://www.linkedin.com/in/jimpames/ - our linkedin !
 
 This project is the RENT A HAL AI Operating Realm
 
+easy install https://www.dropbox.com/scl/fo/63h0vr5lxmrjpvq4a5fm3/AJuFfb4GfpblX4h4Q6-ek6Q?rlkey=t7n3fytwkwm0ubw8cma95yv7y&st=nywszo8u&dl=0
+
+rentahal\webgui.py rentahal\main.py rentahal\static\script.js rentahal\templates\index.html
+
 An Open-Source Speech-Enabled Web gui For Ollama
 - with support for Llama, Llava, Stable Diffusion
 - A I App platform with API interfaces
