@@ -13,6 +13,8 @@ easy install https://www.dropbox.com/scl/fo/63h0vr5lxmrjpvq4a5fm3/AJuFfb4GfpblX4
 
 rentahal\webgui.py rentahal\main.py rentahal\static\script.js rentahal\templates\index.html
 
+https://notcloudai.com/
+
 An Open-Source Speech-Enabled Web gui For Ollama
 - with support for Llama, Llava, Stable Diffusion
 - A I App platform with API interfaces
