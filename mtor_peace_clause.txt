@@ -1,0 +1,77 @@
+# MTOR_PEACE_CLAUSE.md
+
+## MTOR Ethical Use Addendum (Clause of Peace)
+*Amendment to GNU General Public License v3.0*
+*Author: Jim Ames, Founder of MTOR & RENTAHAL*
+*Date: June 18, 2025*
+
+---
+
+### Overview
+This document constitutes a formal ethical addendum to the GNU General Public License v3.0 ("GPL-3.0") as applied to the MTOR software system and all derivative works, subcomponents, or implementations including, but not limited to:
+- MTOR (Multi-Tronic Operating Realm)
+- RENTAHAL
+- FLATNET(TM)
+- REALM FABRIC(TM)
+
+This addendum **places specific limitations on the fields of use** for MTOR to prevent misuse in morally hazardous and internationally restricted domains.
+
+---
+
+## Section I — Prohibited Use Cases
+The MTOR system and its derivatives **may not be used**, directly or indirectly, for the creation, support, control, or execution of any of the following:
+
+### 1. Weapons of Mass Destruction (WMD)
+- Nuclear, thermonuclear, or radiological weapon systems
+- Chemical or biological weapons
+- Electromagnetic pulse (EMP) weapons designed for infrastructure-wide damage
+- Any autonomous weapon platform operating outside of human-in-the-loop control
+
+### 2. Biological Weapon Systems
+- AI-assisted modeling, simulation, or deployment of weaponized pathogens
+- Distribution or delivery systems of biological agents for warfare
+- Autonomous control of biocontainment or pathogen suppression in offensive applications
+- Any use in gain-of-function labs developing weaponized viruses or bacteria
+
+### 3. Offensive Military Systems
+- Real-time battlefield target acquisition or kill-chain processing
+- Command-and-control (C2) systems with integrated lethal autonomy
+- Swarm drone coordination for kinetic effect
+- Cyber-kinetic interfaces used for military aggression
+
+### 4. Oppressive Civilian Control Systems
+- Intent-based surveillance networks targeting populations without due process
+- Predictive policing platforms
+- Biometric identification systems used for state oppression or discrimination
+- Social credit scoring or political behavior monitoring systems
+
+---
+
+## Section II — Permitted & Encouraged Use Cases
+This software is intended to empower decentralized autonomy, sovereignty, and human-AI symbiosis. Permitted and encouraged applications include:
+- Therapeutic robotics and assistive wearables
+- Educational and expressive generative systems
+- Intimacy technologies designed for consent and emotional connection
+- Remote healthcare platforms
+- Distributed ethical AI mesh systems
+
+---
+
+## Section III — Legal Considerations
+Use of MTOR under GPL-3.0 is contingent upon acceptance of this ethical clause. 
+Violation of these terms **constitutes a breach of license**, and developers or entities found in violation:
+- Forfeit rights granted under the GPL-3.0 for MTOR-related code
+- May be subject to legal challenge and public revocation of access
+
+This clause is **binding in spirit and law**, and shall accompany all licensed distributions of MTOR.
+
+---
+
+## Final Word
+MTOR is an instrument of purpose, designed to lift intelligence — not to destroy with it. This clause exists to ensure that the Realm it powers will be one of collaboration, not conquest.
+
+> *Signed in solemn intent,*
+> 
+> **Jim Ames**  
+> N2NHU Labs, MTOR Architect and Steward
+> June 18, 2025
