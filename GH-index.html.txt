@@ -1,0 +1,223 @@
+<!-- TERMS AND CONDITIONS -->  
+
+<!-- ## 🔐 Supplemental License Terms (RENT A HAL Specific) -->  
+
+<!-- In addition to the terms of the GNU General Public License v3.0 (GPL-3.0), the following conditions **explicitly apply** to this project and all derivative works: -->  
+
+<!-- - 🚫 **No Closed Source Derivatives**: Any derivative, fork, or modified version of RENT A HAL must **remain fully open source** under a GPL-compatible license. -->  
+  
+<!-- 🧬 **No Patents**: You **may not patent** RENT A HAL or any part of its original or derived code, design, architecture, or functional implementations. -->  
+
+<!-- 🔁 **License Must Propagate**: Any distribution of modified versions must include this exact clause, in addition to the GPL-3.0, to ensure **eternal openness**. --> 
+
+<!-- ⚖️ **Enforcement**: Violation of these conditions terminates your rights under this license and may be pursued legally. --> 
+
+<!-- This clause is intended to **protect the freedom and integrity** of this AI system for all present and future generations. If you use it — respect it. -->   
+
+<!-- This project is free forever. If you change it — it stays free too. -->  
+
+<!-- this notice must remain in the file forever and in all subsequent derivatives and copies  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENT A HAL - NineThousand</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <div class="bg-green-600 text-white p-4 rounded-t-lg">
+            <h1 id="onprem-secure-ai" class="text-2xl font-bold">OnPrem, Secure AI</h1>
+            <h2 id="ninethousand" class="text font-bold">NineThousand</h2>
+            <h2 id="multi-tronic-operating-realm" class="text font-bold">Multi-Tronic Operating Realm</h2>
+            <h2 id="betafive3-node7b-arrayv3.29sep2024" class="text font-bold">BETAFIVE:3-node/7b-array:v3.29sep2024</h2>
+            <h2 id="publicdemonotcloudai.com" class="text font-bold">publicdemo:notcloudai.com - Delivering the Future to the Present(TM)</h2>
+            <h2 id="xrentahal" class="text font-bold"> <a href="http://x.com/rentahal" target="_blank"> X Updates for RENTAHAL</a></h2>
+            <h2 id="gitrentahal" class="text font-bold"> <a href="http://github.com/jimpames/rentahal" target="_blank">GITHUB code for RENTAHAL</a></h2>
+            <h2 id="bookrentahal" class="text font-bold"> <a href="https://www.amazon.com/Thoughts-Nature-Intelligence-j-ames-ebook/dp/B0DXCGP7GD" target="_blank">Get the Book </a></h2>
+            <h2 id="coinrentahal" class="text font-bold"> <a href="https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump" target="_blank">Get the COIN </a></h2>
+            <h2 id="aboutrentahal" class="text font-bold"> <a href="https://www.linkedin.com/pulse/rentahalcom-secure-onprem-ai-suite-app-support-jim-ames-jog9e" target="_blank">About RENTAHAL</a></h2>
+            <h2 id="youtuberentahal" class="text font-bold"> <a href="https://youtu.be/k8xWLwzsHZ8?si=xVkGPOypPzBBmKFc" target="_blank">RENTAHAL on Youtube </a></h2>
+            <div id="user-info" class="mt-2 text-sm"></div>
+            <div id="connection-status" class="mt-2 text-sm"></div>
+        </div>
+		
+		
+		<div id="gmailAuthPrompt" style="display: none; background-color: yellow; padding: 10px; margin: 10px 0;">
+			<p>Please check your browser windows for a Google authorization prompt. 
+			Complete the authorization process, then say "retry Gmail" to continue.</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+
+        <main class="bg-white p-4 rounded-b-lg shadow">
+            <section id="nickname-section" class="section mb-6">
+                <h3 class="text-xl font-semibold mb-2">Set Your NICKname below (note: for CHAT - set 'Worker Node' to '2070sLABCHAT * WAKE WORD (is: COMPUTER) MODES: /windows/chrome/only! [use F5 *BEFORE* pressing ENABLE WAKE - EACH TIME!]: CHAT / VISION / IMAGINE / WEATHER - say COMPUTER to submit or BACKSPACE to erase prompt '</h3>
+                <div class="flex">
+                    <input type="text" id="nickname-input" class="border p-2 mr-2" placeholder="Enter nickname">
+                    <button id="set-nickname" class="bg-blue-500 text-white px-4 py-2 rounded">Set Nickname</button>
+                </div>
+            </section>
+
+            <section id="query-section" class="section mb-6">
+                <h2 class="text-xl font-semibold mb-2">Submit a Query</h2>
+                <div class="flex flex-col mb-2">
+                    <select id="query-type" class="border p-2 mb-2">
+                        <option value="chat">Chat</option>
+                        <option value="vision">Vision</option>
+                        <option value="imagine">Imagine</option>
+                        <option value="speech">Speech</option>
+                    </select>
+                    <select id="model-type" class="border p-2 mb-2"></select>
+                    <select id="model-select" class="border p-2 mb-2"></select>
+                    <textarea id="prompt-input" class="border p-2 mb-2" rows="4" placeholder="Enter your prompt here"></textarea>
+                    <div id="image-drop-zone" class="border-dashed border-2 border-gray-300 p-4 mb-2 text-center">
+                        Drag and drop an image here or click to select
+                    </div>
+                    <input type="file" id="image-upload" class="hidden" accept="image/*">
+                    <div id="image-preview" class="hidden mb-2">
+                        <img id="preview-img" src="" alt="Preview" class="max-w-full h-auto">
+                    </div>
+                    <div class="flex space-x-2">
+                        <button id="submit-query" class="bg-blue-500 text-white px-4 py-2 rounded">Submit Query</button>
+                        <button id="voice-input-button" class="bg-blue-500 text-white px-4 py-2 rounded">Start Voice Input</button>
+                        <button id="toggle-wake-word" class="bg-blue-500 text-white px-4 py-2 rounded">Enable Wake Word Mode</button>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <input type="checkbox" id="speech-output-checkbox" class="mr-2">
+                        <label for="speech-output-checkbox">Enable Speech Output</label>
+                    </div>
+                </div>
+            </section>
+
+            <canvas id="audioWaveform" width="300" height="150" class="hidden mb-4"></canvas>
+
+            <section id="results-section" class="section mb-6">
+                <h2 class="text-xl font-semibold mb-2">Results</h2>
+                <div id="results" class="border p-4 rounded min-h-20 bg-gray-50"></div>
+                <button id="clear-results" class="mt-2 bg-red-500 text-white px-4 py-2 rounded">Clear Results</button>
+            </section>
+
+            <section id="queue-info" class="section mb-6">
+                <h2 class="text-xl font-semibold mb-2">Queue Information</h2>
+                <div class="bg-gray-200 rounded-full h-4 overflow-hidden">
+                    <div id="queue-thermometer" class="bg-blue-500 h-full text-xs leading-none py-1 text-center text-white" style="width: 0%"></div>
+                </div>
+            </section>
+
+            <section id="cumulative-costs-section" class="section mb-6">
+                <h2 class="text-xl font-semibold mb-2">Cumulative Costs</h2>
+                <div id="cumulative-costs"></div>
+            </section>
+
+            <section id="previous-queries-section" class="section mb-6">
+                <h2 class="text-xl font-semibold mb-2">Previous Queries</h2>
+                <div id="previous-queries"></div>
+            </section>
+
+            <section id="sysop-panel" class="section hidden">
+                <h2 class="text-2xl font-bold mb-4">Sysop Panel</h2>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">System Statistics</h3>
+                    <div id="system-stats"></div>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Manage AI Workers</h3>
+                    <div id="worker-list" class="mb-4"></div>
+                    <form id="add-worker-form" class="flex flex-col">
+                        <input type="text" id="worker-name" placeholder="Worker Name" class="border p-2 mb-2">
+                        <input type="text" id="worker-address" placeholder="Worker Address" class="border p-2 mb-2">
+                        <select id="worker-type" class="border p-2 mb-2">
+                            <option value="chat">Chat</option>
+                            <option value="vision">Vision</option>
+                            <option value="imagine">Imagine</option>
+                        </select>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Worker</button>
+                    </form>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Manage Hugging Face Models</h3>
+                    <div id="huggingface-model-list" class="mb-4"></div>
+                    <form id="add-huggingface-model-form" class="flex flex-col">
+                        <input type="text" id="huggingface-model-name" placeholder="Model Name" class="border p-2 mb-2">
+                        <select id="huggingface-model-type" class="border p-2 mb-2">
+                            <option value="chat">Chat</option>
+                            <option value="vision">Vision</option>
+                            <option value="imagine">Imagine</option>
+                        </select>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Hugging Face Model</button>
+                    </form>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">User Management</h3>
+                    <div id="user-list"></div>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Worker Health</h3>
+                    <div id="worker-health"></div>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Active Users</h3>
+                    <table id="active-users-table" class="w-full">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Sysop Message</h3>
+                    <div class="flex">
+                        <input type="text" id="sysop-message-input" class="border p-2 flex-grow mr-2" placeholder="Enter sysop message">
+                        <button id="send-sysop-message" class="bg-blue-500 text-white px-4 py-2 rounded">Send Message</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+	
+	
+	<!-- Ensure the necessary functions are defined first -->
+	<script>
+		function gapiLoaded() {
+			// Initialize the Google Identity Services (GIS) client
+			gapi.load('client', initializeGapiClient);
+		}
+
+		function gisLoaded() {
+			tokenClient = google.accounts.oauth2.initTokenClient({
+				client_id: 'YOUR_CLIENT_ID_HERE',
+				scope: 'https://www.googleapis.com/auth/gmail.readonly',
+				callback: (resp) => {
+					if (resp.error !== undefined) {
+						console.error("Gmail auth error:", resp.error);
+					} else {
+						console.log("Gmail auth successful");
+						localStorage.setItem('gmail_access_token', resp.access_token);
+						checkAuthAndReadEmails();
+					}
+				}
+			});
+			gisInited = true;
+		}
+	</script>
+
+	<!-- Load your main script -->
+	
+	
+	
+    <script src="/static/script.js"></script>
+	<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+	<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
+</html>
