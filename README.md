@@ -9,6 +9,67 @@ https://www.linkedin.com/in/jimpames/ - our linkedin !
 
 This project is the RENT A HAL AI Operating Realm
 
+"Bringing the future to the present" — N2NHU Lab for Applied AI
+
+Version 26.16.06 · Summer 2026 · Newburgh, NY
+
+============================================================================================================
+
+26 jun 26
+
+==============================================================================================================
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+======================================================================================================================
+
+these binaries are UNSIGNED - I will not have a code signing kit until mid july
+
+you WILL GET WARNINGS downloading/running these files !!!!
+
+if that makes you nervous, go play with the website version until I get it signed
+
+==========================================================================================================================
+
+first installer - kokoro tts microservice for rent-a-hal
+
+=========================================================================================================================
+
+readme - https://drive.google.com/file/d/1-Ypo_aQyK62GeaUgiiIciGwi4tLE9tQm/view?usp=sharing
+
+=======================================================================================================================
+
+kokoro tts installer - https://drive.google.com/file/d/1HqE7tyXUmoh93LhC8lTbAA8i5gpco2m0/view?usp=sharing
+
+====================================================================================================================
+
+second installer - rent-a-hal 26 soho api federated
+
+==============================================================================================================
+
+readme - coming today 26 jun 26
+
+======================================================================================================================
+
+rent-a-hal soho 26 api/federated installer - coming today 26 jun 26
+
+============================================================================================================
+
+25 june 26 product announcement
+
+https://github.com/jimpames/RENT-A-HAL-MTOR-PERSONAL-EDITION-SOHO-26-MULTI-USER-SPEECH-UI-FOR-AI/blob/main/RENT-A-HAL_Product_Announcement.pdf
+
+
 easy install https://www.dropbox.com/scl/fo/63h0vr5lxmrjpvq4a5fm3/AJuFfb4GfpblX4h4Q6-ek6Q?rlkey=t7n3fytwkwm0ubw8cma95yv7y&st=nywszo8u&dl=0
 
 rentahal\webgui.py rentahal\main.py rentahal\static\script.js rentahal\templates\index.html
