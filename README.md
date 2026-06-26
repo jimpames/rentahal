@@ -17,6 +17,12 @@ Version 26.16.06 · Summer 2026 · Newburgh, NY
 
 26 jun 26
 
+every operator that brings up a federated node will receive 10,000 (ten thousand) $9000 rent-a-hal coin from me:
+
+https://pump.fun/coin/3eazihmAw8yNHhgoNaNr8aBGaBaoLcwZVCBDPnrSpump
+
+email me to claim your reward: jimpames@gmail.com
+
 ==============================================================================================================
 
 ***** rent-a-hal 26 soho api federated v1 is released ********
