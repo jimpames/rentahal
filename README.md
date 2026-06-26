@@ -69,6 +69,13 @@ rent-a-hal soho 26 api/federated installer - coming today 26 jun 26
 
 https://github.com/jimpames/RENT-A-HAL-MTOR-PERSONAL-EDITION-SOHO-26-MULTI-USER-SPEECH-UI-FOR-AI/blob/main/RENT-A-HAL_Product_Announcement.pdf
 
+======================================================================================================================
+
+all this below is OLD disregard
+
+as of 26 jun 26
+
+********** disregard below
 
 easy install https://www.dropbox.com/scl/fo/63h0vr5lxmrjpvq4a5fm3/AJuFfb4GfpblX4h4Q6-ek6Q?rlkey=t7n3fytwkwm0ubw8cma95yv7y&st=nywszo8u&dl=0
 
