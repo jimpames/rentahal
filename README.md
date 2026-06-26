@@ -1,6 +1,30 @@
 <p align="center">
-  <img src="https://github.com/jimpames/rentahal/blob/main/png-logo-w-border.png?raw=true" alt="RENT A HAL Banner" width="100%">
+
+  <img width="1022" height="557" alt="rentahal" src="https://github.com/user-attachments/assets/e75eb073-424f-453b-b48a-9ee0711bbc0c" />
+
 </p>
+
+***** rent-a-hal 26 soho api federated v1 is released ********
+
+these binaries are UNSIGNED - I will not have a code signing kit until mid july
+
+you WILL GET WARNINGS downloading/running these files !!!!
+
+if that makes you nervous, go play with the website version until I get it signed
+
+first installer - kokoro tts microservice for rent-a-hal
+
+readme - https://drive.google.com/file/d/1-Ypo_aQyK62GeaUgiiIciGwi4tLE9tQm/view?usp=sharing
+
+kokoro tts installer - https://drive.google.com/file/d/1HqE7tyXUmoh93LhC8lTbAA8i5gpco2m0/view?usp=sharing
+
+second installer - rent-a-hal 26 soho api federated
+
+readme - https://drive.google.com/file/d/1ZdICYLQppaQRRKmX6lTvwB1NbOmANaxX/view?usp=sharing
+
+rent-a-hal soho 26 api/federated installer - https://drive.google.com/file/d/1TFBlRNw3yUThha97AZ05FIl4LpQWr5u4/view?usp=sharing
+
+
 # rentahal
 https://rentahal.com  - public demo !
 https://x.com/rentahal - our X feed !
