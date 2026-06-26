@@ -6,6 +6,8 @@
 
 ***** rent-a-hal 26 soho api federated v1 is released ********
 
+write to me for support: jimpames@gmail.com
+
 these binaries are UNSIGNED - I will not have a code signing kit until mid july
 
 you WILL GET WARNINGS downloading/running these files !!!!
