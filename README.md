@@ -1,3 +1,6 @@
+<img width="1533" height="997" alt="turbo lover" src="https://github.com/user-attachments/assets/6dab6ed9-77ec-4c6c-9a61-75365f9d6e53" />
+<img width="1428" height="989" alt="weather" src="https://github.com/user-attachments/assets/bad1d976-93aa-48bb-94bc-c1f48f1d3731" />
+<img width="1477" height="981" alt="COFFEE" src="https://github.com/user-attachments/assets/b55f15b1-65d8-4b7c-b960-84c7fa1decd2" />
 <p align="center">
 
   <img width="1022" height="557" alt="rentahal" src="https://github.com/user-attachments/assets/e75eb073-424f-453b-b48a-9ee0711bbc0c" />
