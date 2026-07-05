@@ -8,6 +8,8 @@
 
 multi-mode rent-a-hal with client payments and operator cashout is released.
 
+https://github.com/jimpames/RENT-A-HAL-MTOR-PERSONAL-EDITION-SOHO-26-MULTI-USER-SPEECH-UI-FOR-AI/blob/main/FEDERATION_CONSCRIPTION_MANUAL%20(1).md
+
 three files
 
 kokoro tts
