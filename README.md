@@ -4,6 +4,53 @@
 
 </p>
 
+4th july 2026
+
+multi-mode rent-a-hal is released.
+
+three files
+
+kokoro tts
+
+rentahalwizard
+
+rentahalsoho
+
+supports AI chat (gpt4all,claude,many others) , AI vision (LLAVA via Ollama) and AI imagine (automatic1111, stable diffusion 1.5)
+
+***** rent-a-hal 26 soho api federated multi mode v1 is released ********
+
+write to me for support: jimpames@gmail.com
+
+these binaries are UNSIGNED - I will not have a code signing kit until mid july
+
+you WILL GET WARNINGS downloading/running these files !!!!
+
+if that makes you nervous, go play with the website version until I get it signed
+
+first installer - kokoro tts microservice for rent-a-hal
+
+readme - https://drive.google.com/file/d/1-Ypo_aQyK62GeaUgiiIciGwi4tLE9tQm/view?usp=sharing
+
+kokoro tts installer - https://drive.google.com/file/d/1HqE7tyXUmoh93LhC8lTbAA8i5gpco2m0/view?usp=sharing
+
+main rent-a-hal installer:
+
+https://drive.google.com/drive/folders/10RYBbAIQJKqVLDCby_uRU4IFQdwa7YTO?usp=sharing
+
+copy those files to a folder. run the rentahalwizard.exe
+
+visit localhost:9100
+
+new!!!!!!!
+
+say:
+
+what do you see
+
+or
+
+imagine beautiful kittens
 ***** rent-a-hal 26 soho api federated v1 is released ********
 
 deep dive
