@@ -4,6 +4,15 @@
 
 </p>
 
+
+11 jul 26 new books
+
+https://www.amazon.com/dp/B0H8FCRHSL
+
+star-trek-computer-book
+https://www.amazon.com/RENT-HAL-Federated-Multi-User-Speech-ebook/dp/B0H6VR83KR?ref_=ast_author_mpb
+
+rent-a-hal-book
 4th july 2026
 
 multi-mode rent-a-hal with client payments and operator cashout is released.
