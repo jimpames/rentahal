@@ -1,0 +1,60 @@
+RENT-A-HAL
+
+and
+
+KOKORO Microservice
+
+11 july 2026
+
+RENT-A-HAL: Developed by jim ames of n2nhu labs
+
+RENT-A-HAL is released under a strict GPL3 license.
+
+* no commercial use of RENT-A-HAL is permitted without a commercial business license issued by jim ames of n2nhu labs
+
+* commercial evaluation is permitted for 30 days. At the end of 30 days, you MUST convert your license from eval to commercial license - or deinstall the RENT-A-HAL.
+
+* licensing - contact: jimpames@gmail.com - this is the ONLY authorized licensing entity worldwide for RENT-A-HAL
+
+* if you modify the RENT-A-HAL source, you MUST republish it.
+
+*** No one may patent, copyright or trademark any of the concepts or features or functions of RENT-A-HAL
+
+* Commercial incorporation of the RENT-A-HAL source into any product is forbidden!
+
+* automatic blanket license - all public schools get automatic perpetual license for RENT-A-HAL for educational use by students and staff
+
+* if you plan to use RENT-A-HAL for business, you  MUST get a license from me
+
+* jim ames, n2nhu labs, is the only author of RENT-A-HAL
+
+this software is provided at no charge
+by jim ames of n2nhu labs
+
+this software comes with no warranty
+and is not suitable for any purpose
+
+the risk is entirely yours for using this software
+
+this is version 26.1 of rent-a-hal
+ai you control
+
+this release supports 
+
+federation (query and TTS rescue), 
+
+conscription (re-enlist idle nodes for alternate work type)
+
+multi-user, 
+
+payment rails 
+
+and 
+
+is speech first
+
+and
+
+api first
+
+event driven and event bus design 
