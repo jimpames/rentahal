@@ -4,6 +4,11 @@
 
 </p>
 
+12 jul 26
+
+rent-a-hal master source code, GPL3, no commercial use without license from jimpames@gmail.com 
+
+https://github.com/jimpames/RENT-A-HAL-MTOR-PERSONAL-EDITION-SOHO-26-MULTI-USER-SPEECH-UI-FOR-AI/blob/main/RENTAHAL_v1_1_0_ECONOMIC_LAYER_FINAL_2026-07-05.zip
 
 11 jul 26 new books
 
