@@ -4,6 +4,12 @@
 
 </p>
 
+18 jul 26
+
+new website
+
+https://chatvisionimagine.com/
+
 12 jul 26
 
 rent-a-hal master source code, GPL3, no commercial use without license from jimpames@gmail.com 
