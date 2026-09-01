@@ -3,6 +3,16 @@
 
 </p>
 
+
+1 sep 26
+
+get the tricorder for android!!!!!!!!!!
+
+https://github.com/jimpames/tricorder/
+
+
+
+
 18 jul 26
 
 new website
