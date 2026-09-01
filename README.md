@@ -1,11 +1,3 @@
-1 sep 26
-
-get the tricorder for android!!!!!!!!!!
-
-https://github.com/jimpames/tricorder/
-
-
-
 
   <img width="1022" height="557" alt="rentahal" src="https://github.com/user-attachments/assets/e75eb073-424f-453b-b48a-9ee0711bbc0c" />
 
